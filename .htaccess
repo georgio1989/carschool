@@ -1,0 +1,12 @@
+﻿<IfModule mod_rewrite.c>  
+	RewriteEngine on  
+	
+	# Ebben az alkonyvtarban vagyunk, ezt  
+	# figyelembe kell venni az atirasoknal  
+	#RewriteBase /carschool 
+	
+	# Minden nemletezo oldal webcimet iranyitsuk at az index.php-re  
+	RewriteCond %{REQUEST_FILENAME} !-f  
+	RewriteCond %{REQUEST_FILENAME} !-d  
+	RewriteRule ^(.*)$ index.php?q=$1 [QSA]  
+</IfModule>  
