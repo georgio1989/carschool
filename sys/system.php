@@ -12,7 +12,6 @@ class filer{
 			}
 		}
 	}
-	
 	public function GM(){
 		return $this->m;
 	}
@@ -25,16 +24,13 @@ class filer{
 	public function SN($n){
 		$this->nev=$n;
 	}
-	
 	public function GT(){
 		return $this->tartalom;
 	}
-	
 	public function ST($b=false){
 		if($b){
 			$this->merge();
 		}
-		
 		if($this->m=='a'){
 			if(!file_put_contents($this->nev,$this->tartalom, FILE_APPEND)){
 			}
@@ -49,18 +45,15 @@ class filer{
 			file_put_contents($this->nev,$this->buffer,FILE_APPEND);
 		}
 	}
-	
 	public function GB(){
 		return $this->buffer.'<br/>';
 	}
 	public function SB($b){
 		$this->buffer=$b;
 	}
-	
 	public function merge(){
 		$this->tartalom.=$this->buffer;
 	}
-	
 	protected function hiba($ok){
 		print $ok;
 	}
@@ -92,10 +85,6 @@ class system {
 	protected function hiba($ok){
 		
 	}
-	
 }
-
-
-
 $sys=new system();
 ?>

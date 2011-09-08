@@ -13,5 +13,4 @@ function kiir(){
 	print '</pre>';
 }
 kiir();
-
 ?>

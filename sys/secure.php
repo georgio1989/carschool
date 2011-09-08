@@ -1,4 +1,5 @@
 ﻿<?php
+
 #GET,POST,SESSION alap szűrése a G tömbbe $G['g']->~get,$G['p']->~post,$G['s']->~session 
 foreach($_GET as $k=>$i){
 	$G['g'][$k]=addslashes(xss($_GET[$k]));
