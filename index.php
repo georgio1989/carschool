@@ -6,6 +6,7 @@ include 'sys/system.php';
 include 'sys/functions.php';
 include 'sys/secure.php';
 include 'sys/config.php';
+include 'sys/rooter.php';
 function kiir(){
 	global $G;
 	print '<pre>';
