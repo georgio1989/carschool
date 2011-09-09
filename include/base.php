@@ -37,7 +37,9 @@ class mod {
 		print $this->tartalom;
 	}
 	function e404(){
-		// "A keresett oldal nem található!";
+		print "A keresett oldal nem található!";
+		global $sys,$G;
+		$sys->naploz('Nem létező link :'.$G['site']['module']);
 	}
 }
 # Osztály példányosítása
