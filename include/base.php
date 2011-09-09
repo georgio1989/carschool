@@ -1,6 +1,6 @@
 <?php
 class mod {
-	protected $tartalom;
+	protected $tartalom,$jog;
 	public function __construct() {
 		global $G;
 		
@@ -40,6 +40,28 @@ class mod {
 		print "A keresett oldal nem található!";
 		global $sys,$G;
 		$sys->naploz('Nem létező link :'.$G['site']['module']);
+		$sys->e(404,'Nem létező webcímet próbál megjeleníteni!');
+	}
+	public function jog($jogok){
+		global $G;
+		$ok=false;
+		print count($jogok[$_SESSION['user_jog']]);
+		for($i=0;$i<=$_SESSION['user_jog'];$i++){
+			for($j=0;$j<count($jogok[$_SESSION['user_jog']]);$j++){
+				if($jogok[$_SESSION['user_jog']][$j]==$G['site']['method']){
+					$ok=true;
+					print $jogok[$_SESSION['user_jog']][$j].'---'.$G['site']['method'].'<br/>';
+					break;
+				}
+			}
+		}
+		if($ok){
+			return true;
+		}else{
+			global $sys,$G;
+			$sys->naploz('Alacsonyabb jogosultság:'.$G['site']['module'].'/'.$G['site']['method']);
+			$sys->e('ACCES DENIED','A kívánt művelethez nem elég a jogosultsága!');
+		}
 	}
 }
 # Osztály példányosítása
