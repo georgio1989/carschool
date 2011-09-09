@@ -12,12 +12,12 @@ $db->query('SET NAMES '.$DB['charset']);
 $url=@explode('/',$_SERVER['REQUEST_URI']);
 $HOST='http://'.$_SERVER['HTTP_HOST'].'/'.$url[1].'/';
 $SITE['module']=$url[2];
-$SITE['method']=$url[3];
+$SITE['method']=@$url[3];
 $param=@explode('__',$url[4]);
 if(count($param)>1){
 	$SITE['param']=$param;
 }else{
-	$SITE['param']=$url[4];
+	$SITE['param']=@$url[4];
 }
 
 // G tömb létrehozás -> egy változó globalizálásával összes fontos változó elérhető lessz

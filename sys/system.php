@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class filer{
 	protected $nev,$m,$buffer,$tartalom;
 	

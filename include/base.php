@@ -7,7 +7,7 @@ class mod {
 		$this->tartalom='';
 	}
 	function WidgetIlleszt() {
-		$this->tartalom=str_replace('{hirek}',$_SESSION['site_hirek'],$this->tartalom);
+		$this->tartalom=vIll($hirek,$this->tartalom);
 	}
 	function FixUrls() {
 		global $G;
@@ -36,7 +36,10 @@ class mod {
 	function megjelenit() {
 		print $this->tartalom;
 	}
+	function e404(){
+		// "A keresett oldal nem található!";
+	}
 }
-# Oszt�ly p�ld�nyos�t�sa
+# Osztály példányosítása
 $mod=new mod();
 ?>

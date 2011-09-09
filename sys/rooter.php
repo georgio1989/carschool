@@ -1,9 +1,12 @@
 <?php
-# Base.php alap osztály
+# Base.php alap osztÃ¡ly
 include 'include/base.php';
-switch($G['site']['module']){
-	case '':
-		include '';
-		break;
+
+include './include/'.$G['site']['module'].'.php';
+
+
+//error always !false
+if(!@call_user_func(array($mod,$G['site']['method']))){
+	//@call_user_func(array('mod','e404'));
 }
 ?>
