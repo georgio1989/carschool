@@ -2,3 +2,19 @@
 2011.09.09 10:52:06 > 10 @ 127.0.0.1 >->Nem létező link :homeless
 2011.09.09 10:52:27 > 10 @ 127.0.0.1 >->XSS esélyes:homeless/<script>
 2011.09.09 10:52:47 > 10 @ 127.0.0.1 >->XSS esélyes:home/<script>
+2011.09.09 13:22:30 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:24:23 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:24:37 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:24:38 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:24:52 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:25:14 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:25:28 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:26:39 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:27:12 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:28:36 > 10 @ 127.0.0.1 >->Nem létező link :homae
+2011.09.09 13:35:22 > 10 @ 127.0.0.1 >->Nem létező link :homae
+2011.09.09 13:35:34 > 10 @ 127.0.0.1 >->Nem létező link :homae
+2011.09.09 13:35:54 > 10 @ 127.0.0.1 >->Nem létező link :homae
+2011.09.09 13:36:24 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
+2011.09.09 13:36:48 > 10 @ 127.0.0.1 >->Nem létező link :homaae
+2011.09.09 13:37:13 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd

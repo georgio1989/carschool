@@ -84,6 +84,27 @@ class system {
 	protected function hiba($ok){
 		
 	}
+	# Error handler
+	public function e($cim){
+	global $sys,$G;
+
+	switch($cim){
+		case 'ACCES DENIED':
+			$this->naploz('Alacsonyabb jogosultság:'.$G['site']['module'].'/'.$G['site']['method']);
+			$ok='A kívánt művelethez nem elég a jogosultsága!';
+			break;
+		case '404':
+			$this->naploz('Nem létező link :'.$G['site']['module']);
+			$ok='Nem létező webcímet próbál megjeleníteni!';
+			break;
+		default:
+			$ok='Ooops Ismeretlen hiba';
+	}	
+	
+	//kill , hiba templatre illesztés
+	print $cim.' : '.$ok;	
+	}
 }
+
 $sys=new system();
 ?>

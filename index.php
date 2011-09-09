@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['user_id']=10;
-$_SESSION['user_jog']=10;
+$_SESSION['user_jog']=-1;
 $_POST['asd']='asdsada';
 include 'sys/system.php';
 include 'sys/functions.php';
@@ -14,5 +14,6 @@ function kiir(){
 	print_r($G);
 	print '</pre>';
 }
+
 kiir();
 ?>

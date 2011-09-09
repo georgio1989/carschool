@@ -11,8 +11,12 @@ class home extends mod{
 		global $G;		
 	}
 	function asd(){
-		
-		print "haahahahahahahahahaha";
+		$jog=parent::jog($this->jog);
+		if($jog){
+			print "haahahahahahahahahaha";
+		}else{
+			
+		}
 	}
 }
 $mod=new home();
