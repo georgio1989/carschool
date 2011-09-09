@@ -1,7 +1,9 @@
 <?php
+# Fájlműveletek lekezelésének megkönnyítője
 class filer{
 	protected $nev,$m,$buffer,$tartalom;
 	
+	# Ha nem adunk meg megnyitási módot akkor alapból r+w+a lessz
 	public function __construct($nev,$m='a'){
 		$this->m=$m;
 		$this->nev=$nev;
@@ -12,21 +14,28 @@ class filer{
 			}
 		}
 	}
+	# GetMod
 	public function GM(){
 		return $this->m;
 	}
+	# SetMod
 	public function SM($m){
 		$this->m=$m;
 	}	
+	# GetNev
 	public function GN(){
 		return $this->nev;
 	}
+	# SetNev
 	public function SN($n){
 		$this->nev=$n;
 	}
+	# GetTartalom
 	public function GT(){
 		return $this->tartalom;
 	}
+	# SetTartalom(=írás fájlba)
+	# 	a:writable,append		r:fail->readonly	w:ok,felülir minden eddigit,	w+:ok,write,append
 	public function ST($b=false){
 		if($b){
 			$this->merge();
@@ -45,17 +54,21 @@ class filer{
 			file_put_contents($this->nev,$this->buffer,FILE_APPEND);
 		}
 	}
+	# GetBuffer
 	public function GB(){
 		return $this->buffer.'<br/>';
 	}
+	# SetBuffer
 	public function SB($b){
 		$this->buffer=$b;
 	}
+	# Buffer tartalommal eggyesítése
 	public function merge(){
 		$this->tartalom.=$this->buffer;
 	}
+	# Hiba szövegének átadása
 	protected function hiba($ok){
-		print $ok;
+		return $ok;
 	}
 }
 
@@ -64,12 +77,6 @@ class system {
 	
 	public function __construct(){
 		$this->status='AVAIBLE';
-	}
-	# Oldal futásának kényszerített megállítása, hibaüzenet kiírásával, a épés naplózásra kerül
-	public function allj($reszletek){
-		$this->naploz($reszletek);
-		$this->hiba('Illegális művelet');
-		die();
 	}
 	# Napló bejegyzést készít
 	public function naploz($reszletek){
@@ -85,7 +92,7 @@ class system {
 		
 	}
 	# Error handler
-	public function e($cim){
+	public function e($cim,$egyeb=''){
 	global $sys,$G;
 
 	switch($cim){
@@ -96,6 +103,10 @@ class system {
 		case '404':
 			$this->naploz('Nem létező link :'.$G['site']['module']);
 			$ok='Nem létező webcímet próbál megjeleníteni!';
+			break;
+		case 'XSS':
+			$this->naploz('XSS gyanus :'.$egyeb);
+			$ok='Illegális művelet';
 			break;
 		default:
 			$ok='Ooops Ismeretlen hiba';

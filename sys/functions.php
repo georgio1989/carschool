@@ -7,7 +7,7 @@ function xss($string){
 	if($p===false){
 		return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 	}else{
-		$sys->allj('XSS esélyes:'.$string);
+		$sys->e('XSS',$string);
 	  return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 	}
 }

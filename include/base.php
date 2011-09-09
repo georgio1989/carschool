@@ -1,4 +1,5 @@
 <?php
+# A modulok őse, töle örökölnek sok support fgv-t
 class mod {
 	protected $tartalom,$jog;
 	public function __construct() {
@@ -6,36 +7,45 @@ class mod {
 		
 		$this->tartalom='';
 	}
+	# Amennyiben vannak oldalsávban dobozok melyek relative függetlenek az menüpontoktól
+	# 		azok ezzel lesznek fixálva
 	function WidgetIlleszt() {
 		$this->tartalom=vIll($hirek,$this->tartalom);
 	}
+	# A configban megszabott host url-re cseréli a templatek {getUrl}-jét
 	function FixUrls() {
 		global $G;
 		$this->tartalom=str_replace('{getUrl}',$G['host'],$this->tartalom);
 	}
+	# Visszaadja a tartalmat
 	function getTartalom() {
 		return $this->tartalom;
 	}
+	# Cím formázó, ha megadunk  egy 2.ik paramétert olyan hosszuvá csonkitja ( végére ...-al jelöli a csonkítást),
+	#		és alapból a kezdőbetűt nagybetűre transzformálja
 	function title($par,$max_hosz='ul') {
-			$par[0]=strtoupper($par[0]);
-			$ujj='';
-			if($max_hosz!='ul') {
-					for($i=0;$i<$max_hosz;$i++) {
-							if(!isset($par[$i])) {
-									break;
-							}
-							$ujj.=$par[$i];
-					}
-					if($i==$max_hosz) {
-							$ujj.='...';
-							$par=$ujj;
-					}
+		$par[0]=strtoupper($par[0]);
+		$ujj='';
+		if($max_hosz!='ul') {
+			for($i=0;$i<$max_hosz;$i++) {
+				if(!isset($par[$i])) {
+					break;
+				}
+				$ujj.=$par[$i];
 			}
-			return $par;
+			if($i==$max_hosz) {
+				$ujj.='...';
+				$par=$ujj;
+			}
+		}
+		return $par;
 	}
+	# Kiírja a tartalmat
 	function megjelenit() {
 		print $this->tartalom;
 	}
+	# Az adott modul jogait kapja paraméterül, összeveti az aktuális felhasználó jogaival,
+	# 	ha gebasz van naplóz és terel a hibaoldalra
 	public function jog($jogok){
 		global $G;
 		$ok=false;
