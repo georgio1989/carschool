@@ -163,7 +163,7 @@ body{
 	height:1px;
 	margin:12px;
 }
-.cetli .tit,.cetli .tit_2{
+.cetli .tit,.cetli .tit_2,.cetli .tit_3{
 	float:left;
 	color:#aec6ca;
 	margin:0px 0px 10px 10px;
@@ -171,13 +171,22 @@ body{
 	font-size:15px;
 	font-family:Arial;
 	margin-bottom:10px;
-}.cetli .dat,.cetli .dat_2{
+}.cetli .dat,.cetli .dat_2,.cetli .dat_3{
 	float:right;
 	color:#bbf6d5;
 	margin:0px 10px 10px 0px;
 	font-weight:bold;
 	font-size:14px;
 	font-family:Arial;
+}
+.cetli .tit_3,.cetli .dat_3{
+	position:absolute;
+	top:80px;
+	left:0px;
+	font-size:18px;
+}
+.cetli .dat_3{
+	left:110px;
 }
 .cetli .dat_2,.cetli .tit_2{
 	font-size:18px;

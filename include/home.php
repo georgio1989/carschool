@@ -15,6 +15,10 @@ class home extends mod{
 	function asd(){
 		if(parent::jog($this->jog)){
 			$this->tartalom.= "haahahahahahahahahaha";
+			$foCim='Kezdőlap';
+			$this->tartalom=str_replace('{foCim}',$foCim,$this->tartalom);
+			$contents='Üdv az oldalon!';
+			$this->tartalom=str_replace('{contents}',$contents,$this->tartalom);
 		}
 	}
 }
