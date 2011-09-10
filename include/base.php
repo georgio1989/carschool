@@ -8,7 +8,7 @@ class mod {
 		$_SESSION['lab']=getElem('lab');
 		if($_SESSION['user_id']>0){
 			$_SESSION['cetli']=getElem('cetli2');
-			$_SESSION['cetli']=str_replace('{jog}',$_SESSION['user_jog'],$_SESSION['cetli']);
+			$_SESSION['cetli']=str_replace('{jog}',getJog($_SESSION['user_jog']),$_SESSION['cetli']);
 			$_SESSION['cetli']=str_replace('{nev}',$_SESSION['user_nev'],$_SESSION['cetli']);
 		}else{
 			$_SESSION['cetli']=getElem('cetli');

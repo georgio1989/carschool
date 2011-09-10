@@ -45,4 +45,25 @@ function getElem($nev){
 	return $tartalom;
 }
 
+# Jog int->str
+function getJog($adat){
+	switch($adat){
+		case 1:
+			$r='Diák';
+			break;
+		case 2:
+			$r='Tanár';
+			break;
+		case 3:
+			$r='Admin';
+			break;
+		case 4:
+			$r='Admin';
+			break;
+		default:
+			$r='Hibás jogosultság';
+	}
+	return $r;
+}
+
 ?>
