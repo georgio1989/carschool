@@ -38,6 +38,5 @@
 	{lab}
 </div>
 <div id="body_eff_tuk_r">
-	<div id="body_eff_tuk">
-	</div>
+	<div id="body_eff_tuk"></div>
 </div>

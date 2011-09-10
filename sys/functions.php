@@ -41,5 +41,29 @@ function getJog($adat){
 	}
 	return $r;
 }
+#Debug miatt váltoozorol print mindent;
+function getDat($v){
+	print '<font color="red"><pre>';
+	if(!isset($v)){
+		print 'NOT SET';
+	}else{
+		if(is_array($v)){
+			print_r($v);
+		}
+		else{
+			print '->'.@htmlspecialchars($v, ENT_QUOTES, 'UTF-8').'<-<br />length:'.strlen($v);
+		}
+	}
+	print '</pre></font>';
+}
 
+#whitespace cleaner
+function ws($s){
+	for($i=0;$i<strlen($s);$i++){
+		if($s[$i]==' ' or $s[$i]=='
+		' ){
+			$s[$i]='';
+		}
+	}
+}
 ?>

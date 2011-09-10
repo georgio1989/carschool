@@ -1,30 +1,3 @@
 ﻿      DATE          - ID -     IP     -      DESCRIPTION
-2011.09.09 10:52:06 > 10 @ 127.0.0.1 >->Nem létező link :homeless
-2011.09.09 10:52:27 > 10 @ 127.0.0.1 >->XSS esélyes:homeless/<script>
-2011.09.09 13:27:12 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:35:54 > 10 @ 127.0.0.1 >->Nem létező link :homae
-2011.09.09 14:01:14 > 10 @ 127.0.0.1 >->XSS gyanus :home/ascriptsd
-2011.09.10 09:28:22 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 09:32:16 > 0 @ 127.0.0.1 >->LOGGING IN FAIL WRONG PASS/USERNAME :bela @~>bela
-2011.09.10 09:51:48 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 09:52:30 > 2 @ 127.0.0.1 >->LOGGED IN :2
-2011.09.10 09:52:53 > 2 @ 127.0.0.1 >->LOGGED OUT :2
-2011.09.10 09:52:53 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 10:00:25 > 2 @ 127.0.0.1 >->LOGGED IN :2
-2011.09.10 10:02:53 > 2 @ 127.0.0.1 >->Nem létező link :usera
-2011.09.10 10:04:26 > 2 @ 127.0.0.1 >->Nem létező link :usear
-2011.09.10 10:05:14 > 2 @ 127.0.0.1 >->Alacsonyabb jogosultság:user/admin
-2011.09.10 10:28:09 > 2 @ 127.0.0.1 >->Nem létező link :usear
-2011.09.10 11:43:14 > 2 @ 127.0.0.1 >->LOGGED OUT :2
-2011.09.10 11:43:14 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 11:43:26 > 2 @ 127.0.0.1 >->LOGGED IN :2
-2011.09.10 11:43:35 > 2 @ 127.0.0.1 >->LOGGED OUT :2
-2011.09.10 11:43:35 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 11:43:47 > 2 @ 127.0.0.1 >->LOGGED IN :2
-2011.09.10 11:45:45 > 2 @ 127.0.0.1 >->LOGGED OUT :2
-2011.09.10 11:45:45 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 12:02:37 > 2 @ 127.0.0.1 >->LOGGED IN :2
-2011.09.10 12:03:08 > 2 @ 127.0.0.1 >->LOGGED OUT :2
-2011.09.10 12:03:08 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
-2011.09.10 12:10:50 > 0 @ 127.0.0.1 >->LOGGING IN FAIL WRONG PASS/USERNAME : @~>
-2011.09.10 12:10:55 > 2 @ 127.0.0.1 >->LOGGED IN :2
+2011.09.10 12:23:56 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
+2011.09.10 13:58:16 > 0 @ 127.0.0.1 >->Nem létező link :static

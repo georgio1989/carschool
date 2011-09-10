@@ -19,6 +19,13 @@ class mod {
 	function WidgetIlleszt() {
 		$this->tartalom=vIll($hirek,$this->tartalom);
 	}
+	# Default method set
+	function setDef($m){
+		global $G;
+		if(strlen($G['site']['method'])==0 or $G['site']['method']=='' or !isset($G['site']['method'])){
+			$G['site']['method']=$m;
+		}
+	}
 	# A configban megszabott host url-re cseréli a templatek {getUrl}-jét
 	function FixUrls() {
 		global $G;
@@ -49,7 +56,11 @@ class mod {
 	}
 	# Kiírja a tartalmat
 	function megjelenit() {
-		$this->tartalom.=getElem('footer');
+		$this->tartalom.=ws(getElem('footer'));
+		$alma=getElem('footer');
+		//getDat($alma);
+		//$this->tartalom.='</div></div></body></html>';
+		
 		print $this->tartalom;
 	}
 	# Az adott modul jogait kapja paraméterül, összeveti az aktuális felhasználó jogaival,

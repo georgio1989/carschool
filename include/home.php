@@ -11,10 +11,10 @@ class home extends mod{
 	function __construct(){
 		global $G;
 		$this->tartalom=parent::pref();
+		parent::setDef('asd');
 	}
 	function asd(){
 		if(parent::jog($this->jog)){
-			$this->tartalom.= "haahahahahahahahahaha";
 			$foCim='Kezdőlap';
 			$this->tartalom=str_replace('{foCim}',$foCim,$this->tartalom);
 			$contents='Üdv az oldalon!';
