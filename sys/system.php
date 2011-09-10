@@ -110,8 +110,8 @@ class system {
 			break;
 		default:
 			$ok='Ooops Ismeretlen hiba';
-	}	
-	
+	}
+
 	//kill , hiba templatre illesztés
 	print $cim.' : '.$ok;	
 	}

@@ -1,22 +1,12 @@
-﻿
+﻿      DATE          - ID -     IP     -      DESCRIPTION
 2011.09.09 10:52:06 > 10 @ 127.0.0.1 >->Nem létező link :homeless
 2011.09.09 10:52:27 > 10 @ 127.0.0.1 >->XSS esélyes:homeless/<script>
-2011.09.09 10:52:47 > 10 @ 127.0.0.1 >->XSS esélyes:home/<script>
-2011.09.09 13:22:30 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:24:23 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:24:37 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:24:38 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:24:52 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:25:14 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:25:28 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:26:39 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
 2011.09.09 13:27:12 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:28:36 > 10 @ 127.0.0.1 >->Nem létező link :homae
-2011.09.09 13:35:22 > 10 @ 127.0.0.1 >->Nem létező link :homae
-2011.09.09 13:35:34 > 10 @ 127.0.0.1 >->Nem létező link :homae
 2011.09.09 13:35:54 > 10 @ 127.0.0.1 >->Nem létező link :homae
-2011.09.09 13:36:24 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:36:48 > 10 @ 127.0.0.1 >->Nem létező link :homaae
-2011.09.09 13:37:13 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
-2011.09.09 13:39:23 > 10 @ 127.0.0.1 >->Alacsonyabb jogosultság:home/asd
 2011.09.09 14:01:14 > 10 @ 127.0.0.1 >->XSS gyanus :home/ascriptsd
+2011.09.10 09:28:22 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
+2011.09.10 09:32:16 > 0 @ 127.0.0.1 >->LOGGING IN FAIL WRONG PASS/USERNAME :bela @~>bela
+2011.09.10 09:51:48 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
+2011.09.10 09:52:30 > 2 @ 127.0.0.1 >->LOGGED IN :2
+2011.09.10 09:52:53 > 2 @ 127.0.0.1 >->LOGGED OUT :2
+2011.09.10 09:52:53 > 0 @ 127.0.0.1 >->CONNECTED AS:vendeg
