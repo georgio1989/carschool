@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" media="screen" href="style.css" type="text/css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <title>Kezdőlap</title>
+        <script type="text/javascript" src="static/js/script.js"></script>
+    </head>
+    <body>
+			<div id="body_eff">
+				<div id="body_racs">
+					<div id="contener">
+						<div id="head">
+						</div >
+						<!-- Menü -->
+						<div id="menu">
+							<ul>
+								<li class="m" id="l_0"><a id="a_0" href="#" class=""  onclick="valt(0)" >Kezdőlap</a></li>
+								<li class="m" id="l_1"><a id="a_1" href="#" class="" onclick="valt(1)" >Kapcsolat</a></li>
+								<li class="m" id="l_2"><a id="a_2" href="#" class="" onclick="valt(2)" >Információk</a></li>
+							</ul>
+							<div class="search">
+								<form method="post">
+									<input type="submit" value="" name="keres_ok" class="keres_btn" />
+									<input type="text" value="Keresés" name="keres_mit" class="keres_txt" />
+								</form>
+							</div>
+						</div>
+						<!-- /Menü doboz -->
+						<!-- Közép doboz -->
+						<div id="tartalom">
+							<!-- Oldalsáv doboz -->
+							<div id="oldal_sav">
+								<div class="cetli">
+									<!-- (Ha be van jelentkezve) 
+									<p class="cim">Adatok</p>
+									<hr />
+									<br />
+									<div class="spacer"></div>
+										<span class="tit_2">Név :</span>
+										<span class="dat_2">Kis Béla</span>
+									<br />
+										<span class="tit_2">Jog :</span>
+										<span class="dat_2">admin</span>
+									<br />
+									<form method="post">
+										<input type="submit" value="" name="user_kilep" class="kilepes" />	
+									</form>
+									(/Ha be van jelentkezve)-->
+									<form method="post" action="index2.html">
+										<p class="cim">Belépés</p>
+										<hr />
+										<br />
+										<div class="spacer"></div>
+											<span class="tit">Felhasználónév :</span>
+											<span class="dat"><input type="text" name="felh_nev" class="text" /></span>
+										<br />
+											<span class="tit">Jelszó :</span>
+											<span class="dat"><input type="password" name="felh_nev" class="text" /></span>
+										<br />
+										<input type="submit" value="" name="user_kilep" class="belepes" />	
+									</form>
+									<!-- Felgyűrődés effect--><div class="lap_effect"></div>
+								</div>
+							</div>
+							<!-- /Oldalsáv doboz -->
+							<!-- Elválasztó vonal -->
+							<div id="fo_elvalaszto"><img src="img/vert_sep.png"/></div>
+							<!-- /Elválasztó vonal -->
+							<!-- Tényleges tartalom -->
+							<div id="fo_doboz">
+								<p class="cim">Ez egy sablon</p>
+								<hr />
+								<p>
+									Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipiscing elit. Vestibulum at pharetra nisi. Vivamus placerat ipsum in leo dignissim eleifend. Sed quis ipsum nisi. Nunc velit mi, consectetur sed commodo id, varius id enim. Suspendisse eu ante posuere felis pulvinar sagittis. Sed venenatis tempus tincidunt. Sed posuere velit quis arcu auctor cursus et eget libero. In quis arcu mi. Donec orci enim, sollicitudin eu egestas vel, facilisis nec sapien. Sed blandit, nibh at dictum posuere, leo mauris rutrum dui, at varius eros ipsum eget metus. Curabitur ullamcorper malesuada augue, sed viverra nunc hendrerit in. In hac habitasse platea dictumst. Vivamus lacinia interdum eros at sagittis. Fusce consectetur lobortis libero at aliquam. Ut congue orci et justo aliquam feugiat. 
+								</p>
+								<!-- Hiba doboz -->
+								<div class="error">
+									<span class="title">Hiba történt :</span>
+									<br />
+									<span class="desc">Érvénytelen beviteli adatok!</span>
+								</div>
+								<!-- /Hiba doboz -->
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Vestibulum</a> at pharetra nisi. Vivamus placerat ipsum in leo dignissim eleifend. Sed quis ipsum nisi. Nunc velit mi, consectetur sed commodo id, varius id enim. Suspendisse eu ante posuere felis pulvinar sagittis. Sed venenatis tempus tincidunt. Sed posuere velit quis arcu auctor cursus et eget libero. In quis arcu mi. Donec orci enim, sollicitudin eu egestas vel, facilisis nec sapien. Sed blandit, nibh at dictum posuere, leo mauris rutrum dui, at varius eros ipsum eget metus. Curabitur ullamcorper malesuada augue, sed viverra nunc hendrerit in. In hac habitasse platea dictumst. Vivamus lacinia interdum eros at sagittis. Fusce consectetur lobortis libero at aliquam. Ut congue orci et justo aliquam feugiat. 
+								</p>
+								<!-- figyelmeztetés doboz -->
+								<div class="warning">
+									<span class="title">Figyelem :</span>
+									<br />
+									<span class="desc">A választott témában még nincsenek adatok!</span>
+								</div>
+								<!-- /figyelmeztetés doboz -->
+  							<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at pharetra nisi. Vivamus placerat ipsum in leo dignissim eleifend. Sed quis ipsum nisi. Nunc velit mi, consectetur sed commodo id, varius id enim. Suspendisse eu ante posuere felis pulvinar sagittis. Sed venenatis tempus tincidunt. Sed posuere velit quis arcu auctor cursus et eget libero. In quis arcu mi. Donec orci enim, sollicitudin eu egestas vel, facilisis nec sapien. Sed blandit, nibh at dictum posuere, leo mauris rutrum dui, at varius eros ipsum eget metus. Curabitur ullamcorper malesuada augue, sed viverra nunc hendrerit in. In hac habitasse platea dictumst. Vivamus lacinia interdum eros at sagittis. Fusce consectetur lobortis libero at aliquam. Ut congue orci et justo aliquam feugiat. 
+								</p>
+								<!-- siker doboz -->
+								<div class="succes">
+									<span class="title">Sikeres művelet :</span>
+									<br />
+									<span class="desc">A törlés sikeresen végrehajtva!</span>
+								</div>
+								<!-- /siker doboz -->
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at pharetra nisi. Vivamus placerat ipsum in leo dignissim eleifend. Sed quis ipsum nisi. Nunc velit mi, consectetur sed commodo id, varius id enim. Suspendisse eu ante posuere felis pulvinar sagittis. Sed venenatis tempus tincidunt. Sed posuere velit quis arcu auctor cursus et eget libero. In quis arcu mi. Donec orci enim, sollicitudin eu egestas vel, facilisis nec sapien. Sed blandit, nibh at dictum posuere, leo mauris rutrum dui, at varius eros ipsum eget metus. Curabitur ullamcorper malesuada augue, sed viverra nunc hendrerit in. In hac habitasse platea dictumst. Vivamus lacinia interdum eros at sagittis. Fusce consectetur lobortis libero at aliquam. Ut congue orci et justo aliquam feugiat. 
+								</p>
+							</div>
+							<!-- /Tényleges tartalom -->
+						</div>
+						<!-- /Közép -->
+						<!-- Lábléc -->
+						<div id="lab">
+							<!-- Ball doboz -->
+							<div class="bal">
+								<p class="cim">Oldal térkép</p>
+								<ul>
+									<li><a href="#">Link 1</a></li>
+									<li><a href="#">Link 2</a></li>
+										<ul>
+											<li class="al"><a href="#" class="ala">Al Link 1</a></li>
+											<li class="al"><a href="#" class="ala">Al Link 2</a></li>
+										</ul>
+									<li><a href="#">Link 3</a></li>
+									<li><a href="#">Link 4</a></li>
+								</ul>
+							</div>
+							<!-- /ball doboz -->
+							<!-- Közép doboz -->
+							<div class="koz">
+								<p class="cim">Külső linkek</p>
+								<a href="#" class="kuls">Külső link 1</a><br />
+								<a href="#" class="kuls">Külső link 2</a><br />
+								<a href="#" class="kuls">Külső link 3</a><br />
+								<a href="#" class="kuls">Külső link 4</a><br />
+								<a href="#" class="kuls">Külső link 5</a><br />
+								<a href="#" class="kuls">Külső link 6</a><br />
+							</div>
+							<!-- /Közép doboz -->
+							
+							<!-- Jobb doboz -->
+							<div class="jobb">
+								<i>nemtok már mit ide írni :(</i>
+							</div>
+							<!-- /Jobb doboz -->
+						</div>
+					</div>
+					<div id="body_eff_tuk_r">
+						<div id="body_eff_tuk">
+						</div>
+					</div>
+				</div>
+			</div>
+    </body>
+</html>

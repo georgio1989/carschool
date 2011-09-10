@@ -12,19 +12,19 @@ body{
 	min-width:900px;
 	width:100%;
 	height:746px;
-	background-image:url("img/bg_effect.png");
+	background-image:url("../../static/img/bg_effect.png");
 	position:absolute;
 }#body_racs{
 	min-width:900px;
 	width:100%;
 	height:1px;
-	background-image:url("img/bg_racs.png");
+	background-image:url("../../static/img/bg_racs.png");
 	position:absolute;
 }
 #head{
 	width:900px;
 	height:100px;
-	background-image:url("img/head.png");
+	background-image:url("../../static/img/head.png");
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-box-shadow: 2px 2px 4px #333;
@@ -34,21 +34,21 @@ body{
 	width:900px;
 	height:100px;
 	margin:0px auto;
-	background-image:url("img/tukor.png");
+	background-image:url("../../static/img/tukor.png");
 }
 #body_eff_tuk_r{
 	min-width:900px;
 	width:100%;
 	height:100px;
 	margin:0px auto;
-	background-image:url("img/tukor_r.png");
+	background-image:url("../../static/img/tukor_r.png");
 	margin-top:6px;
 }
 #menu{
 	margin-top:-9px;
 	width:900px;
 	height:33px;
-	background-image:url("img/menu_bg.png");
+	background-image:url("../../static/img/menu_bg.png");
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-box-shadow: 2px 2px 4px #333;
@@ -56,7 +56,7 @@ body{
 }
 #tartalom{
 	width:900px;
-	background-image:url("img/tart_bg.png");
+	background-image:url("../../static/img/tart_bg.png");
 	margin-top:7px;
 	height:900px;/*!!!!!!*/
 	-moz-border-radius:5px;
@@ -67,7 +67,7 @@ body{
 #lab{
 	width:900px;
 	height:300px;
-	background-image:url("img/lab_bg.png");
+	background-image:url("../../static/img/lab_bg.png");
 	margin-top:7px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -89,7 +89,7 @@ body{
 	color:#cff;
 }
 #menu li.sima:hover{
-	background-image:url("img/menu_hov.png");
+	background-image:url("../../static/img/menu_hov.png");
 	border:1px solid #3f4244;
 	width:98px;
 	height:21px;
@@ -98,7 +98,7 @@ body{
 	-webkit-border-radius:3px;
 }
 #menu li.akt{
-	background-image:url("img/menu_akt.png");
+	background-image:url("../../static/img/menu_akt.png");
 	border-bottom:1px solid #777a7c;
 	width:100px;
 	height:21px;
@@ -124,7 +124,7 @@ body{
 .search input.keres_btn{
 	width:14px;
 	height:14px;
-	background-image:url("img/search.png");
+	background-image:url("../../static/img/search.png");
 	background-color:#484f54;
 	border:0px;
 	margin:10px 5px 5px 15px;
@@ -133,7 +133,7 @@ body{
 	width:120px;
 	height:27px;
 	border:0px;
-	background:url("img/menu_bg.png") -1px;
+	background:url("../../static/img/menu_bg.png") -1px;
 	color:#fff;
 	font-style:italic;
 	position:absolute;
@@ -150,7 +150,7 @@ body{
 .cetli{
 	width:180px;
 	height:200px;
-	background-image:url("img/slide_box.png");
+	background-image:url("../../static/img/slide_box.png");
 	margin:10px;
 	position:relative;
 	-moz-border-radius:3px;
@@ -188,7 +188,7 @@ body{
 .cetli input.kilepes,.cetli input.belepes{
 	width:121px;
 	height:34px;
-	background-image:url("img/kilepes.png");
+	background-image:url("../../static/img/kilepes.png");
 	background-color:#6b7175;
 	border:0px;
 	position:absolute;
@@ -202,7 +202,7 @@ body{
 .cetli input.belepes{
 	width:116px;
 	height:29px;
-	background-image:url("img/belepes2.png");
+	background-image:url("../../static/img/belepes2.png");
 	top:180px;
 	left:33px;
 	-moz-box-shadow: 2px 10px 15px #333;
@@ -219,7 +219,7 @@ body{
 .lap_effect{
 	width:55px;
 	height:70px;
-	background-image:url("img/slide_box_ef.png");
+	background-image:url("../../static/img/slide_box_ef.png");
 	position:absolute;
 	top:130px;
 	left:125px;
@@ -240,13 +240,13 @@ body{
 
 /*	Separátor*/
 #fo_doboz hr,.cetli hr{
-	background:url("img/hr_bg.png") 20px 0px no-repeat;
+	background:url("../../static/img/hr_bg.png") 20px 0px no-repeat;
 	width:699px;
 	height:2px;
 	border:0px;
 }
 .cetli hr{
-	background:url("img/cetli_hr.png") 0px 0px no-repeat;
+	background:url("../../static/img/cetli_hr.png") 0px 0px no-repeat;
 	width:147px;
 	position:absolute;
 	top:30px;
@@ -294,7 +294,7 @@ body{
 .error,.warning,.succes{
 	width:644px;
 	height:83px;
-	background-image:url("img/error_box.png");
+	background-image:url("../../static/img/error_box.png");
 	margin: 10px 0px 15px 25px;
 	padding:5px;
 	position:relative;
@@ -317,7 +317,7 @@ body{
 	left:25px;
 }
 .warning {
-	background-image:url("img/warning_box.png");
+	background-image:url("../../static/img/warning_box.png");
 }
 .warning .title{
 	color:#e9e2b2;
@@ -326,7 +326,7 @@ body{
 	color:#e1dec0;
 }
 .succes {
-	background-image:url("img/succes_box.png");
+	background-image:url("../../static/img/succes_box.png");
 }
 .succes .title{
 	color:#b2e9b7;
@@ -374,11 +374,11 @@ body{
 	text-decoration:underline;
 }
 #lab li{
-	list-style-image:url("img/ico1.png");
+	list-style-image:url("../../static/img/ico1.png");
 	margin:2px;
 }
 #lab li.al{
-	list-style-image:url("img/ico2.png");
+	list-style-image:url("../../static/img/ico2.png");
 	margin:1px 0px 1px 10px;
 }
 
@@ -396,7 +396,7 @@ body{
 	font-size:15px;
 	font-family:arial;
 	font-weight:bold;
-	background-image: url("img/tb_title_bg.png");
+	background-image: url("../../static/img/tb_title_bg.png");
 	border: 1px dashed #d6e3f0;
 	margin: 0px 0px 5px 0px;
 	-moz-box-shadow: 2px 2px 10px #333;
@@ -411,7 +411,7 @@ body{
 }
 .table_f .td,.table_f .atten,.table_a .td_c,.table_a .td_t{
 	float:left;
-	background-image: url("img/tb_td_bg.png");
+	background-image: url("../../static/img/tb_td_bg.png");
 	border: 1px dotted white;
 	margin:2px;
 	padding:5px;
@@ -421,7 +421,7 @@ body{
 	-webkit-border-radius:3px;
 }
 .table_f .atten{
-	background-image: url("img/tb_tde_bg.png");
+	background-image: url("../../static/img/tb_tde_bg.png");
 	color:#fcc;
 }
 .table_f .foot, .table_a .foot{
@@ -437,7 +437,7 @@ body{
 	padding-left:25px;
 }
 .table_a .td_t{
-	background-image: url("img/tb_td2_bg.png");
+	background-image: url("../../static/img/tb_td2_bg.png");
 	color:#cfc;
 }
 .table_a input.sima{
@@ -457,7 +457,7 @@ body{
 	background-color:#399;
 	border: 1px solid #4b8aa4;
 	color:#b4f5f5;
-	background-image: url("img/but_bg.png");
+	background-image: url("../../static/img/but_bg.png");
 	-moz-box-shadow: 2px 2px 10px #333;
 	-webkit-box-shadow: 2px 2px 10px #333;
 	-moz-border-radius:6px;
@@ -465,7 +465,7 @@ body{
 
 }
 .table_a input.bevisz:hover{
-	background-image: url("img/but_bg_h.png");
+	background-image: url("../../static/img/but_bg_h.png");
 }
 /* táblában a cellák szélesség/hosszuság szabályozása
 	 egy külső diven át (styler) */

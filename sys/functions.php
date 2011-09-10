@@ -37,4 +37,12 @@ function vIll(&$var, $hol, $scope=false, $prefix='unique', $suffix='value')
 	return $hol;
 }
 
+# visszaadja egy fájl által tartalmazott html kódot, azért praktikus fgv-t irni rá mert ha egyszer 
+#		mysql-be átraknám a fájlok tartalmát csak a file_get_contents-t sql lekérdezésre kell modositani
+function getElem($nev){
+	$utvonal='./templates/'.$nev.'.tpl';
+	$tartalom=file_get_contents($utvonal);
+	return $tartalom;
+}
+
 ?>

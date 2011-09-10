@@ -9,11 +9,12 @@ class home extends mod{
 	);
 	
 	function __construct(){
-		global $G;		
+		global $G;
+		$this->tartalom=parent::pref();
 	}
 	function asd(){
 		if(parent::jog($this->jog)){
-			print "haahahahahahahahahaha";
+			$this->tartalom.= "haahahahahahahahahaha";
 		}
 	}
 }

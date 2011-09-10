@@ -4,8 +4,15 @@ class mod {
 	protected $tartalom,$jog;
 	public function __construct() {
 		global $G;
-		
-		$this->tartalom='';
+		$_SESSION['simple']=getElem('simple');
+		$_SESSION['lab']=getElem('lab');
+		if($_SESSION['user_id']>0){
+			$_SESSION['cetli']=getElem('cetli2');
+			$_SESSION['cetli']=str_replace('{jog}',$_SESSION['user_jog'],$_SESSION['cetli']);
+			$_SESSION['cetli']=str_replace('{nev}',$_SESSION['user_nev'],$_SESSION['cetli']);
+		}else{
+			$_SESSION['cetli']=getElem('cetli');
+		}
 	}
 	# Amennyiben vannak oldalsávban dobozok melyek relative függetlenek az menüpontoktól
 	# 		azok ezzel lesznek fixálva
@@ -42,6 +49,7 @@ class mod {
 	}
 	# Kiírja a tartalmat
 	function megjelenit() {
+		$this->tartalom.=getElem('footer');
 		print $this->tartalom;
 	}
 	# Az adott modul jogait kapja paraméterül, összeveti az aktuális felhasználó jogaival,
@@ -63,6 +71,12 @@ class mod {
 			global $sys;
 			$sys->e('ACCES DENIED');
 		}
+	}
+	# Összeilleszti az oldal elemeit
+	public function pref(){
+		$_SESSION['simple']=str_replace('{cetli}',$_SESSION['cetli'],$_SESSION['simple']);
+		$_SESSION['simple']=str_replace('{lab}',$_SESSION['lab'],$_SESSION['simple']);
+		return $_SESSION['simple'];
 	}
 }
 # Osztály példányosítása

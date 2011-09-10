@@ -80,12 +80,14 @@ class system {
 	}
 	# Napló bejegyzést készít
 	public function naploz($reszletek){
-		$naplo=new filer('./save/log.txt','w+');
-		$ido=date('Y.m.d H:i:s');
-		$str='
+		//if(!$reszletek=='Nem létező link :static'){
+			$naplo=new filer('./save/log.txt','w+');
+			$ido=date('Y.m.d H:i:s');
+			$str='
 '.$ido.' > '.$_SESSION['user_id'].' @ '.$_SERVER['REMOTE_ADDR'].' >->'.$reszletek;
-		$naplo->SB($str);
-		$naplo->ST();
+			$naplo->SB($str);
+			$naplo->ST();
+		//}
 	}
 	# Hibaüzenet kidobása
 	protected function hiba($ok){
