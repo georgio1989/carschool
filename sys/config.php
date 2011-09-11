@@ -11,7 +11,11 @@ $db->query('SET NAMES '.$DB['charset']);
 # Hostra vonatkozó beállítások, SITE tömb feltöltése
 $url=@explode('/',$_SERVER['REQUEST_URI']);
 $HOST='http://'.$_SERVER['HTTP_HOST'].'/'.$url[1].'/';
-$SITE['module']=$url[2];
+if(strlen($url[2])<1){
+	$SITE['module']='home'; # DEFAULT module;
+}else{
+	$SITE['module']=$url[2];
+}
 $SITE['method']=@$url[3];
 $param=@explode('__',$url[4]);
 if(count($param)>1){

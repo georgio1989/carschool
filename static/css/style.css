@@ -120,6 +120,7 @@ body{
 	float:right;
 	border-left:1px solid #7b8184;
 	position:relative;
+	top:-42px;
 }
 .search input.keres_btn{
 	width:14px;

@@ -21,7 +21,7 @@ $(document).ready(function() {
 	var x=$('div#fo_doboz').height();
 	$('div#tartalom').css('height',x+100);
 	$('div#fo_elvalaszto').css('height',x+79);
-	$('div#body_racs').css('height',x+612);
+	$('div#body_racs').css('height',x+638);
 	
 	// Akt menüpont=0.ik
 	valt(0);

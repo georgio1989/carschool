@@ -6,6 +6,7 @@ class mod {
 		global $G;
 		$_SESSION['simple']=getElem('simple');
 		$_SESSION['lab']=getElem('lab');
+		$_SESSION['menu']=$this->createMenu();
 		if($_SESSION['user_id']>0){
 			$_SESSION['cetli']=getElem('cetli2');
 			$_SESSION['cetli']=str_replace('{jog}',getJog($_SESSION['user_jog']),$_SESSION['cetli']);
@@ -16,6 +17,32 @@ class mod {
 	}
 	# Amennyiben vannak oldalsávban dobozok melyek relative függetlenek az menüpontoktól
 	# 		azok ezzel lesznek fixálva
+	function createMenu(){
+		global $G;
+		$vaz=getElem('menu');
+		$item=getElem('item');
+		$items='';
+		$sth=$G['db']->query('SELECT * FROM menu WHERE jog<'.$_SESSION['user_jog'].' OR jog='.$_SESSION['user_jog']);
+		$result = $sth->fetchAll();
+		$sz=0;
+		foreach($result as $r){
+			$i=$item;
+			$i=str_replace('{link}',$r['url'],$i);
+			$i=str_replace('{nev}',$r['modulnev'],$i);
+			$i=str_replace('{szam}',$sz,$i);
+			$sz++;
+			if($G['site']['module']==$r['modulnev']){
+				$i=str_replace('{li_akt}','akt',$i);
+				$i=str_replace('{a_akt}','aktual',$i);
+			}else{
+				$i=str_replace('{li_akt}','m',$i);
+				$i=str_replace('{a_akt}','',$i);
+			}
+			$items.=$i;
+		}
+		$vaz=str_replace('{item}',$items,$vaz);
+		return $vaz;
+	}
 	function WidgetIlleszt() {
 		$this->tartalom=vIll($hirek,$this->tartalom);
 	}
@@ -56,11 +83,7 @@ class mod {
 	}
 	# Kiírja a tartalmat
 	function megjelenit() {
-		$this->tartalom.=ws(getElem('footer'));
-		$alma=getElem('footer');
-		//getDat($alma);
-		//$this->tartalom.='</div></div></body></html>';
-		
+		$this->FixUrls($this->tartalom);
 		print $this->tartalom;
 	}
 	# Az adott modul jogait kapja paraméterül, összeveti az aktuális felhasználó jogaival,
@@ -86,6 +109,7 @@ class mod {
 	# Összeilleszti az oldal elemeit
 	public function pref(){
 		$_SESSION['simple']=str_replace('{cetli}',$_SESSION['cetli'],$_SESSION['simple']);
+		$_SESSION['simple']=str_replace('{menu}',$_SESSION['menu'],$_SESSION['simple']);
 		$_SESSION['simple']=str_replace('{lab}',$_SESSION['lab'],$_SESSION['simple']);
 		return $_SESSION['simple'];
 	}

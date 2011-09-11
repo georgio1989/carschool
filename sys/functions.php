@@ -17,8 +17,12 @@ function xss($string){
 #		mysql-be átraknám a fájlok tartalmát csak a file_get_contents-t sql lekérdezésre kell modositani
 function getElem($nev){
 	$utvonal='./templates/'.$nev.'.tpl';
-	$tartalom=file_get_contents($utvonal);
-	return $tartalom;
+	$tartalom=file($utvonal);
+	$t='';
+	foreach($tartalom as $s){
+		$t.=$s;
+	}
+	return $t;
 }
 
 # Jog int->str
@@ -57,13 +61,4 @@ function getDat($v){
 	print '</pre></font>';
 }
 
-#whitespace cleaner
-function ws($s){
-	for($i=0;$i<strlen($s);$i++){
-		if($s[$i]==' ' or $s[$i]=='
-		' ){
-			$s[$i]='';
-		}
-	}
-}
 ?>

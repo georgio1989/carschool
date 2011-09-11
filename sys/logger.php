@@ -149,7 +149,7 @@ class felhasznalo extends vendeg {
 			return FALSE;
 		}
 	}
-#Jelszó módosító fgv
+#Jelszó módosító fgv//////////////////////////////////////////////////////////////////////////////////////////
 	function SetJelszo($adat) {
 			$jelszo=md5($adat);
 			$sql="UPDATE felhasznalok SET jelszo='$jelszo' WHERE felhaszn_nev='$this->felh_nev'";
@@ -213,11 +213,12 @@ if(isset($G['p']['login_gomb'])) {
 			$_SESSION['ido']=date('Y.m.d H:i:s');
 			include './sys/secure.php';
 			$sys->naploz('LOGGED IN :'.$_SESSION['user_id']);
+			$_SESSION['login_fail']=0;
 		}
 		# Amenyiben hibás adatokat adott meg hiba tömbbe bekerül a hibaüzenet amit az ertesit.php jelenit meg
 		else {
 			$hiba[]=" Hibás felhasználónév vagy jelszó!";
-			$sys->naploz('LOGGING IN FAIL WRONG PASS/USERNAME :'.$G['p']['user_nev']." @~>".$_POST['user_nev']);
+			$sys->e('LOGIN FAIL');
 		}
 	}
 	# Amenyiben a login formra kerül egy már bejelentkezett felhasználó
