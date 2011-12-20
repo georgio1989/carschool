@@ -1,1 +1,1 @@
-﻿<li class="m" id="l_{szam}" class="{li_akt}"><a id="a_{szam}" href="{getUrl}{link}" class="{a_akt}" onclick="valt({szam})" >{nev}</a></li>
+﻿<li class="{li_akt}"><a  href="{getUrl}{link}" class="{a_akt}" >{nev}</a></li>

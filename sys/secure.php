@@ -13,9 +13,7 @@ foreach($_SESSION as $k=>$i){
 // php tűzfal lekezelhető itt
 $fw=new fw();
 if($fw->getStatus()=='BANNED'){
-	$meg=$fw->meg();
 	include './sys/banned.php';
 	die();
 }
-//print $_SESSION['login_fail'];
 ?>

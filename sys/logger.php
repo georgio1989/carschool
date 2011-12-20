@@ -135,8 +135,9 @@ class felhasznalo extends vendeg {
 	function SetAdat($par,$adat) {
 		global $G;
 		if($par!='jelszo') {
-			$sth=$G['db']->prepare('UPDATE felhasznalok SET ?=? WHERE felhaszn_nev=?');
-			$d=$sth->execute(array($par,$adat,$this->felh_nev));
+			$sth=$G['db']->prepare('UPDATE felhasznalok SET ?=? WHERE azonosito=?');
+			$d=$sth->execute(array($par,$adat,$this->azon));
+			print_r($d);
 			if($d) {
 				$this->Refresh();
 				return TRUE;
@@ -152,8 +153,6 @@ class felhasznalo extends vendeg {
 #Jelszó módosító fgv//////////////////////////////////////////////////////////////////////////////////////////
 	function SetJelszo($adat) {
 			$jelszo=md5($adat);
-			$sql="UPDATE felhasznalok SET jelszo='$jelszo' WHERE felhaszn_nev='$this->felh_nev'";
-			$mod=mysql_query($sql);
 			$sth=$G['db']->prepare('UPDATE felhasznalok SET jelszo=? WHERE felhaszn_nev=?');
 			$d=$sth->execute(array($jelszo,$this->felh_nev));
 			if($mod) {
@@ -206,6 +205,7 @@ if(isset($G['p']['login_gomb'])) {
 		# Amenyiben érvényes adatokkal bejelentkezik valaki, munkamenet beállítodik az adatainak megfelelően
 		if($user->JszEllen($G['p']['user_jsz'],$G['p']['user_nev'])) {
 			$user=new felhasznalo('nev',$G['p']['user_nev']);
+			$user->SetAdat('utolso_belepes',date('Y.m.d H:i:s'));
 			$user->refresh();
 			$_SESSION['user_jog']=$user->GetJog();
 			$_SESSION['user_nev']=$user->GetFelh_nev();

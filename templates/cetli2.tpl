@@ -12,4 +12,5 @@
 	<form method="post">
 		<input type="submit" value="" name="logout_gomb" class="kilepes" />	
 	</form>
+	<div class="lap_effect"></div>
 </div>

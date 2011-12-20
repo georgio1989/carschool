@@ -14,7 +14,8 @@ body{
 	height:746px;
 	background-image:url("../../static/img/bg_effect.png");
 	position:absolute;
-}#body_racs{
+}
+#body_racs{
 	min-width:900px;
 	width:100%;
 	height:1px;
@@ -138,7 +139,7 @@ body{
 	color:#fff;
 	font-style:italic;
 	position:absolute;
-	top:1px;
+	top:2px;
 	left:40px;
 }
 /*	Tartalom doboz részletei 	*/

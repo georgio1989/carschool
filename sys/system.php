@@ -96,48 +96,48 @@ class system {
 	}
 	# Error handler
 	public function e($cim,$egyeb=''){
-	global $sys,$G,$fw;
+		global $sys,$G,$fw;
 
-	switch($cim){
-		case 'ACCES DENIED':
-			$this->naploz('Alacsonyabb jogosultság:'.$G['site']['module'].'/'.$G['site']['method']);
-			$ok='A kívánt művelethez nem elég a jogosultsága!';
-			break;
-		case 'LOGIN FAIL':
-			$_SESSION['login_fail']=(isset($_SESSION['login_fail']))?$_SESSION['login_fail']+1:1;
-			$this->naploz('LOGGING IN FAIL WRONG PASS/USERNAME :'.$G['p']['user_nev']." @~>".$_POST['user_nev'].' 3/'.$_SESSION['login_fail'].' try');
-			$ok='Helytelen felhasználónév/jelszó!<br/>3/'.$_SESSION['login_fail'].' próba!';
-			if($_SESSION['login_fail']==3){
-				$fw->bann();
-				$_SESSION['login_fail']=0;
-			}
-			break;
-		case '404':
-			$this->naploz('Nem létező link :'.$G['site']['module']);
-			$ok='Nem létező webcímet próbál megjeleníteni!';
-			break;
-		case 'XSS':
-			$this->naploz('XSS gyanus :'.$egyeb);
-			$ok='Illegális művelet';
-			break;
-		default:
-			$ok='Ooops Ismeretlen hiba';
-	}
+		switch($cim){
+			case 'ACCES DENIED':
+				$this->naploz('Alacsonyabb jogosultság:'.$G['site']['module'].'/'.$G['site']['method']);
+				$ok='A kívánt művelethez nem elég a jogosultsága!';
+				break;
+			case 'LOGIN FAIL':
+				$_SESSION['login_fail']=(isset($_SESSION['login_fail']))?$_SESSION['login_fail']+1:1;
+				$this->naploz('LOGGING IN FAIL WRONG PASS/USERNAME :'.$G['p']['user_nev']." @~>".$_POST['user_nev'].' 3/'.$_SESSION['login_fail'].' try');
+				$ok='Helytelen felhasználónév/jelszó!<br/>3/'.$_SESSION['login_fail'].' próba!';
+				if($_SESSION['login_fail']==3){
+					$fw->bann();
+					$_SESSION['login_fail']=0;
+				}
+				break;
+			case '404':
+				$this->naploz('Nem létező link :'.$G['site']['module']);
+				$ok='Nem létező webcímet próbál megjeleníteni!';
+				break;
+			case 'XSS':
+				$this->naploz('XSS gyanus :'.$egyeb);
+				$ok='Illegális művelet';
+				break;
+			default:
+				$ok='Ooops Ismeretlen hiba';
+		}
 
-	//kill , hiba templatre illesztés
-	$site=getElem('simple');
-	$sablon=getElem('error');
-	$sablon=str_replace('{hiba_cim}',$cim,$sablon);
-	$sablon=str_replace('{hiba_leiras}',$ok,$sablon);
-	$site=str_replace('{hiba_leiras}',$ok,$site);
-	$site=str_replace('{foCim}','Hiba!',$site);
-	$site=str_replace('{contents}',$sablon,$site);
-	$site=str_replace('{cetli}',$_SESSION['cetli'],$site);
-	$site=str_replace('{menu}',$_SESSION['menu'],$site);
-	$site=str_replace('{lab}',$_SESSION['lab'],$site);
-	$site=str_replace('{getUrl}',$G['host'],$site);
-	print $site;
-	die();
+		//kill , hiba templatre illesztés
+		$site=getElem('simple');
+		$sablon=getElem('error');
+		$sablon=str_replace('{hiba_cim}',$cim,$sablon);
+		$sablon=str_replace('{hiba_leiras}',$ok,$sablon);
+		$site=str_replace('{hiba_leiras}',$ok,$site);
+		$site=str_replace('{foCim}','Hiba!',$site);
+		$site=str_replace('{contents}',$sablon,$site);
+		$site=str_replace('{cetli}',$_SESSION['cetli'],$site);
+		$site=str_replace('{menu}',$_SESSION['menu'],$site);
+		$site=str_replace('{lab}',$_SESSION['lab'],$site);
+		$site=str_replace('{getUrl}',$G['host'],$site);
+		print $site;
+		die();
 	
 	}
 }

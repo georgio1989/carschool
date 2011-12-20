@@ -1,11 +1,11 @@
 ﻿<?php
-class home extends mod{
+class kapcsolat extends mod{
 	
 	# Jogosultság tároló ,0.tömbben szereplőkhöz 0-ás jogosultság vagy nagyobb kell,1esben 1es vagy nagyobb stb...	
 	protected $jog=array(
-		array('asd'),		#0-ás jogosultság				  -|
+		array('asd'),	#0-ás jogosultság						  -
 		array(),			#1es vagy 0ás jogosultság		   |-hívása esetén parent::jog($this->jog); true-t ad vissza ellenkező esetben
-		array() 			#1es,2es vagy 0ás jogosultság 	  _|           ACCES DENIED hibaüzenet kidobása + die + naplózás
+		array() 			#1es,2es vagy 0ás jogosultság -           ACCES DENIED hibaüzenet kidobása + die + naplózás
 	);
 	
 	function __construct(){
@@ -15,14 +15,20 @@ class home extends mod{
 	}
 	function asd(){
 		if(parent::jog($this->jog)){
-			$foCim='Kezdőlap';
-			$contents='Üdv az oldalon!';
-
-
+			$foCim='Kapcsolat';
 			$this->tartalom=str_replace('{foCim}',$foCim,$this->tartalom);
+			$contents='Üdv az oldalon!';
+			$this->tartalom=str_replace('{contents}',$contents,$this->tartalom);
+		}
+	}
+	public function admin(){
+		if(parent::jog($this->jog)){
+			$foCim='Kapcsolat - Admin';
+			$this->tartalom=str_replace('{foCim}',$foCim,$this->tartalom);
+			$contents='Admin felület - Kapcsolatok szerkesztése';
 			$this->tartalom=str_replace('{contents}',$contents,$this->tartalom);
 		}
 	}
 }
-$mod=new home();
+$mod=new kapcsolat();
 ?>

@@ -12,5 +12,5 @@
 		<br />
 		<input type="submit" value="" name="login_gomb" class="belepes" />	
 	</form>
-	<!-- Felgyűrődés effect--><div class="lap_effect"></div>
+	<div class="lap_effect"></div>
 </div>

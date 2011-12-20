@@ -24,14 +24,11 @@ class mod {
 		$items='';
 		$sth=$G['db']->query('SELECT * FROM menu WHERE jog<'.$_SESSION['user_jog'].' OR jog='.$_SESSION['user_jog']);
 		$result = $sth->fetchAll();
-		$sz=0;
 		foreach($result as $r){
 			$i=$item;
 			$i=str_replace('{link}',$r['url'],$i);
 			$i=str_replace('{nev}',$r['modulnev'],$i);
-			$i=str_replace('{szam}',$sz,$i);
-			$sz++;
-			if($G['site']['module']==$r['modulnev']){
+			if(strpos($r['url'],$G['site']['module'])!==false){
 				$i=str_replace('{li_akt}','akt',$i);
 				$i=str_replace('{a_akt}','aktual',$i);
 			}else{
