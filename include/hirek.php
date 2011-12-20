@@ -16,18 +16,20 @@ class hirek extends mod{
 	function friss(){
 		global $G;
 		if(parent::jog($this->jog)){
-			$list='';
+			$contents='';
 			$q=$G['db']->query('SELECT * FROM hirek limit 10');
 			$r=$q->fetchAll();
 			foreach($r as $f){
-				print $f['id'];
-				print $f['cim'];
-				print $f['tartalom'];
+				$sablon_hir=getElem('hir_item');
+				$sablon_hir=str_replace('{id}',$f['id'],$sablon_hir);
+				$sablon_hir=str_replace('{cim}',$f['cim'],$sablon_hir);
+				$sablon_hir=str_replace('{tartalom}',$f['tartalom'],$sablon_hir);
+				
+				$contents.=$sablon_hir;
 			}
 		
 			$foCim='Hírek';
 			$this->tartalom=str_replace('{foCim}',$foCim,$this->tartalom);
-			$contents='Üdv az oldalon!';
 			$this->tartalom=str_replace('{contents}',$contents,$this->tartalom);
 		}
 	}
