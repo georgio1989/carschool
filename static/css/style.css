@@ -248,7 +248,60 @@ body{
 	min-height:700px;
 	float:right;
 }
-
+.hir{
+	width:95%;
+	margin:5px;
+	border:1px solid #246;
+	padding:10px;
+	position:relative;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.hir_cim{
+	position:absolute;
+	top:5px;
+	left:10px;
+	text-decoration:underline;
+	color:#9f9;
+}
+.hir_szerzo{
+	position:absolute;
+	top:5px;
+	left:480px;
+	color:#B9DEE4;
+}
+.hir_mikor{
+	font-size:11px;
+	color:yellow;
+}
+.h_kitolt{
+	height:20px;
+	width:100%;
+}
+.hir_tartalom{
+	padding:0px;
+}
+.hir_tartalom p{
+	text-align:justify;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+a.hir_tovabb{
+	font-size:14px;
+	float:right;
+	margin:-15px 0px 0px 0px;
+}
+.h_nezo p{
+	margin:10px;
+}
+.h_nezo a.hir_tovabb{
+	float:left;
+	margin-left:20px;
+}
+.h_nezo .hir_szerzo{
+	position:relative;
+	margin: 0px 500px 0px 0px;
+}
 /*	Separátor*/
 #fo_doboz hr,.cetli hr{
 	background:url("../../static/img/hr_bg.png") 20px 0px no-repeat;

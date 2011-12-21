@@ -15,7 +15,6 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `akt_tanfolyam`
 --
@@ -32,7 +31,6 @@ CREATE TABLE IF NOT EXISTS `akt_tanfolyam` (
   KEY `akt_tanfolyam_FKIndex2` (`elozmenykod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `akt_tanfolyam_ido`
 --
@@ -48,7 +46,6 @@ CREATE TABLE IF NOT EXISTS `akt_tanfolyam_ido` (
   KEY `akt_tanfolyam_ido_FKIndex2` (`oktato`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `akt_vizsga`
 --
@@ -72,7 +69,6 @@ CREATE TABLE IF NOT EXISTS `akt_vizsga` (
   KEY `akt_vizsga_FKIndex5` (`elozmenykod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `elozmeny`
 --
@@ -83,9 +79,6 @@ CREATE TABLE IF NOT EXISTS `elozmeny` (
   PRIMARY KEY (`elozmenykod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
-
-
 --
 -- Tábla szerkezet: `felhasznalok`
 --
@@ -104,7 +97,6 @@ CREATE TABLE IF NOT EXISTS `felhasznalok` (
   PRIMARY KEY (`azonosito`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `helyszin`
 --
@@ -117,7 +109,6 @@ CREATE TABLE IF NOT EXISTS `helyszin` (
   PRIMARY KEY (`helyszinkod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `meglevo_elozmenyek`
 --
@@ -129,7 +120,6 @@ CREATE TABLE IF NOT EXISTS `meglevo_elozmenyek` (
   KEY `meglevo_elozmenyek_FKIndex1` (`elozmenykod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `menu`
 --
@@ -140,7 +130,6 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `jog` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `oldal_elemek`
 --
@@ -152,7 +141,6 @@ CREATE TABLE IF NOT EXISTS `oldal_elemek` (
   `feltetel` TEXT
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `tanfolyam`
 --
@@ -163,7 +151,6 @@ CREATE TABLE IF NOT EXISTS `tanfolyam` (
   PRIMARY KEY (`t_kod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `tanfolyam_jelentkezes`
 --
@@ -181,7 +168,6 @@ CREATE TABLE IF NOT EXISTS `tanfolyam_jelentkezes` (
   KEY `tanfolyam_jelentkezes_FKIndex2` (`azonosito`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `vizsga`
 --
@@ -192,7 +178,6 @@ CREATE TABLE IF NOT EXISTS `vizsga` (
   PRIMARY KEY (`v_kod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Tábla szerkezet: `vizsga_jelentkezes`
 --
@@ -210,6 +195,21 @@ CREATE TABLE IF NOT EXISTS `vizsga_jelentkezes` (
   KEY `vizsga_jelentkezes_FKIndex2` (`azonosito`),
   KEY `vizsga_jelentkezes_FKIndex3` (`azonosito`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+--
+-- Tábla szerkezet: `hirek`
+--
+
+CREATE TABLE IF NOT EXISTS `hirek` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cim` varchar(50) COLLATE utf8_hungarian_ci NOT NULL,
+  `tartalom` text COLLATE utf8_hungarian_ci NOT NULL,
+  `szerzo` int(11) NOT NULL,
+  `mikor` datetime NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=1 ;
+
 -- --------------------------------------------------------
 -- --------------------------------------------------------
 
